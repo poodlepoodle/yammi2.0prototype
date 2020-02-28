@@ -1,0 +1,30 @@
+import React, {Component} from 'react';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+
+import HomeScreen from './HomeScreen';
+import JumoonScreen from './JumoonScreen';
+import WalletScreen from './WalletScreen';
+import ShoppingScreen from './ShoppingScreen';
+
+
+const AppNavigator = createStackNavigator ({
+        Home : {
+            screen : HomeScreen,
+        },
+        Jumoon : {
+            screen : JumoonScreen,
+        },
+        Wallet : {
+            screen : WalletScreen,
+        },
+        Shopping : {
+            screen : ShoppingScreen,
+        },
+    },
+    {
+        initialRouteName : 'Shopping',
+    }
+);
+
+export default createAppContainer(AppNavigator);
